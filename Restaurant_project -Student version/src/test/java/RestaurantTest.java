@@ -64,4 +64,10 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void calculate_cost_of_items_added_from_menu(){
+        int cost = restaurant.calculateCostOfItems("Sweet corn soup","Vegetable lasagne");
+        assertThat(cost,equalTo(388));
+    }
 }
